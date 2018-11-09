@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="JQUERY, HTML5, CSS3, anything you want, 中文也可以">
+<meta name="description" content="2nd Trial Nov.09, 2018">
+<meta name="author" content="Put down name, even cellular here">
+<title>高得畬_jQuery_3d_eBook</title>
+
+
+<html>
+<head>
+<title>jQuery 3D Book</title>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=UTF-8">
+
+
+
+<script>
+
+$(function(){
+
+	var arr = [];
+
+	arr[0] = [
+		['images/001.jpg','BOOK NAME' ],
+		'images/002.jpg', 'images/003.jpg',
+		'images/004.jpg', 'images/005.jpg',
+		'images/006.jpg', 'images/007.jpg',
+		'images/008.jpg', 'images/009.jpg',
+		'images/010.jpg', 'images/011.jpg',
+		'images/012.jpg', 'images/013.jpg',
+		'images/014.jpg', 'images/015.jpg',
+		'images/016.jpg'
+		];	
+
+		
+	
+	$('#photobook').onebook(arr[0]);
+
+
+	$('#book-links a').each(function(i){
+		$(this).on('click',function(){
+
+			if(arr&&arr[i]){
+				$('#photobook').onebook(arr[i]);		
+			};
+
+			return false;		
+		});
+	});
+
+
+
+		
+});
+
+
+</script>
+
+
+<style>
+html,body{width:100%;margin:0px;padding:0px;background:#e0604a url('./i/bg2.jpg');color:#000000;min-width:800px;}
+body * { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+.links a:link,.links a:visited{color:black;text-decoration:none;font:20px sans-serif;}
+.links a:hover{color:black;text-decoration:underline;}
+
+.red {border:1px solid #ffc30d;}
+.red-filled {background:#e0604a;border:1px solid #ffc30d;}
+.blue {background:#67BCCF;}
+
+.section {width:97%;border-radius:10px; margin:10px auto;}
+.section p{text-align:center;margin:0px;padding:20px;font:16px sans-serif;line-height:140%;}
+.section p strong {color:gold;}
+
+.section-list {width:900px;border-radius:10px;margin:50px auto;}
+
+.address{margin:0px auto 50px auto;padding:0px;width:800px;text-align:center;}
+.address, .address a{font:16px arial, sans-serif;color:black;}
+
+#book-links {text-align: center;padding: 10px;color: white;}
+#book-links a:link, #book-links a:visited {color: white;font:24px sans-serif;text-decoration: none;}
+#book-links a:hover {text-decoration: underline;}
+
+</style>
+
+</head>
+<body>
+
+<h1 style="text-align:center;margin:10px auto 10px auto;color:white;font:20px arial;">++jQuery 制作的翻頁書程式</h1>	
+
+<div class="section red-filled">
+<div style="padding:10px;">
+	<div id="photobook" style="height:150px;"></div> 
+</div>
+</div>
+
+<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="./js/three.min.js"></script>
+<script type="text/javascript" src="./js/jquery.onebook3d-2.3.0-full.js"></script>
+
+
+</body>
+</html>
